@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - name: Set up Git
+      - name: Set up Git user config
         run: |
           git config user.email "ctions@github.com"
           git config user.name "GitHub Actions"
