@@ -1,22 +1,36 @@
 import React from "react";
-import Header from "./components/Header";
-import AboutMe from "./components/AboutMe";
-import Experience from "./components/Experience";
-import Footer from "./components/Footer";
+import { StyledContainer, StyledBox, StyledPaper } from "./components/styled";
+import {
+  Header,
+  Sidebar,
+  AboutMe,
+  Experience,
+  Skills,
+  Education,
+} from "./components";
 
-const App: React.FC = () => (
-  <div style={appStyle}>
-    <Header />
-    <AboutMe />
-    <Experience />
-    <Footer />
-  </div>
-);
+const App: React.FC = () => {
+  return (
+    <StyledContainer maxWidth="lg">
+      <StyledBox display="flex" flexDirection="row" gap={4}>
+        {/* Left Sidebar */}
+        <StyledBox flex="1">
+          <Sidebar />
+        </StyledBox>
 
-const appStyle = {
-  fontFamily: "Arial, sans-serif",
-  lineHeight: "1.6",
-  color: "#333",
+        {/* Main Content */}
+        <StyledBox flex="3">
+          <StyledPaper>
+            <Header />
+            <AboutMe />
+            <Experience />
+            <Education />
+            <Skills />
+          </StyledPaper>
+        </StyledBox>
+      </StyledBox>
+    </StyledContainer>
+  );
 };
 
 export default App;

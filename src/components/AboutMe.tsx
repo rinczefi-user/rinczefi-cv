@@ -1,18 +1,16 @@
 import React from "react";
+import { Paper, Typography } from "@mui/material";
+import { resumeData } from "../data/data";
 
-const AboutMe: React.FC = () => (
-  <section style={sectionStyle}>
-    <h2>About Me</h2>
-    <p>
-      Passionate front-end developer with a strong focus on React and
-      TypeScript, eager to contribute to innovative projects. Skilled in
-      building responsive, interactive, and user-friendly web applications.
-    </p>
-  </section>
-);
-
-const sectionStyle = {
-  padding: "1rem",
+const AboutMe: React.FC = () => {
+  return (
+    <Paper elevation={3} sx={{ p: 3, mb: 4, bgcolor: "background.paper" }}>
+      <Typography variant="h5" gutterBottom>
+        About Me
+      </Typography>
+      <Typography variant="body1">{resumeData.summary}</Typography>
+    </Paper>
+  );
 };
 
 export default AboutMe;

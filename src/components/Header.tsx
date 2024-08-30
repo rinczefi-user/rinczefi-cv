@@ -1,17 +1,28 @@
 import React from "react";
+import { Typography } from "@mui/material";
+import { StyledBox } from "./styled";
+import { resumeData } from "../data/data";
 
-const Header: React.FC = () => (
-  <header style={headerStyle}>
-    <h1>Your Name</h1>
-    <h2>Front-End Developer</h2>
-    <p>Email: yourname@example.com | LinkedIn: /yourprofile</p>
-  </header>
-);
-
-const headerStyle = {
-  textAlign: "center" as const,
-  padding: "1rem",
-  backgroundColor: "#f5f5f5",
+const Header: React.FC = () => {
+  return (
+    <StyledBox sx={{ padding: "16px", textAlign: "center" }}>
+      <Typography
+        variant="h2"
+        sx={{ marginBottom: "8px", color: "text.primary" }}
+      >
+        {resumeData.header.name}
+      </Typography>
+      <Typography variant="h5" sx={{ color: "text.secondary" }}>
+        {resumeData.header.title}
+      </Typography>
+      <Typography
+        variant="body1"
+        sx={{ marginTop: "16px", color: "text.primary" }}
+      >
+        {resumeData.summary}
+      </Typography>
+    </StyledBox>
+  );
 };
 
 export default Header;
