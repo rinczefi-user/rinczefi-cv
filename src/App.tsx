@@ -23,8 +23,8 @@ const App: React.FC = () => {
           <StyledPaper>
             <Header />
             <AboutMe />
-            <Education />
             <Experience />
+            <Education />
             <Skills />
           </StyledPaper>
         </StyledBox>
