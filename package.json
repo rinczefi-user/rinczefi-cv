@@ -9,7 +9,6 @@
     "predeploy": "yarn build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://rinczefi-user.github.io/rinczefi-cv",
   "author": "Inczefi Robert",
   "license": "MIT",
   "dependencies": {
