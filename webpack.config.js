@@ -9,7 +9,7 @@ module.exports = {
     publicPath: "/",
   },
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx"],
+    extensions: [".ts", ".tsx", ".js"],
   },
   module: {
     rules: [
@@ -24,17 +24,13 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    static: path.resolve(__dirname, "dist"),
+    historyApiFallback: true,
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
   ],
-  devServer: {
-    static: {
-      directory: path.join(__dirname, "dist"),
-    },
-    compress: true,
-    port: 3000,
-    historyApiFallback: true,
-  },
 };
