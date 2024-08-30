@@ -26,7 +26,7 @@ jobs:
 
       - name: Set up Git user config
         run: |
-          git config user.email "ctions@github.com"
+          git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
 
       - name: Set Remote URL with token
