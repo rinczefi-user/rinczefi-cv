@@ -23,9 +23,9 @@ const App: React.FC = () => {
           <StyledPaper>
             <Header />
             <AboutMe />
+            <Education />
             <Experience />
             <Skills />
-            <Education />
           </StyledPaper>
         </StyledBox>
       </StyledBox>
