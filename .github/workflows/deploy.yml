@@ -3,7 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Change to your default branch if it's different
+      - main
+  workflow_dispatch:
 
 jobs:
   deploy:
